@@ -1,0 +1,265 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body{
+    height: 100vh;
+    font-family: "Raleway", sans-serif;
+    background: #2F3238;
+  }
+  .container2{
+    margin: 30px 0px 0px 6%;
+  }
+  .row{
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+  }
+  
+  .image{
+    position: relative;
+    /* flex: 1; */
+    float: left;
+    width: 299px;
+    height: 376px;
+    /* max-width: 299px; */
+    margin: 20px;
+    overflow: hidden;
+  }
+  
+  .image img{
+    position: relative;
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    transition: 0.6s;
+    transition-property: opacity;
+  }
+  
+  .image .details1{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 1;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  .image .details1 p{
+    margin: 200px 30px 0 30px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    opacity: 0;
+    transition: 0.6s;
+    transition-property: opacity, transform;
+  }
+  
+  .image:hover .details1 p{
+    opacity: 1;
+    transform: translateY(-25px);
+  }
+  .image:hover img{
+    opacity: 0.2;
+  }
+  
+  .more{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    bottom: -60px;
+    transition: 0.6s;
+    transition-property: bottom;
+  }
+  
+  .image:hover .more{
+    bottom: 0;
+  }
+  
+  .more .read-more{
+    color: #000;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  
+  .more .read-more span{
+    font-weight: 900;
+  }
+  
+  .more .icon-links i{
+    color: #000;
+    font-size: 20px;
+  }
+  
+  .more .icon-links a:not(:last-child) i{
+    margin-right: 20px;
+  }
+
+  .container1{
+    max-width: 700px;
+    width: 100%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 25px 30px 5px 25px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  .container1 .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container1 .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 112px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+  .content form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+  }
+  form .user-details .input-box{
+    width: calc(100% / 2 - 20px);
+  }
+  form .input-box span.details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .user-details .input-box input:focus,
+  .user-details .input-box input:valid{
+    border-color: #9b59b6;
+  }
+   form .button{
+     height: 45px;
+     margin: 35px 0
+   }
+   form .button input{
+     height: 100%;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+     text-align: center;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background: linear-gradient(135deg, #71b7e6, #9b59b6);
+   }
+   form .button input:hover{
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+    }
+
+    @media (max-width: 1080px){
+      .image{
+        flex: 100%;
+        max-width: 299px;
+      }
+  
+      .container2{
+        margin: 30px 0px 0px 0px;
+      }
+    }
+
+    @media (max-width: 768px){
+      .image{
+        flex: 100%;
+        max-width: 299px;
+      }
+  
+      .container2{
+        margin: 30px 0px 0px 6%;
+      }
+    }
+
+   @media(max-width: 584px){
+   .container1{
+    max-width: 100%;
+  }
+  .container2{
+    margin: 30px 0px 0px 6%;
+  }
+  form .user-details .input-box{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    form .category{
+      width: 100%;
+    }
+    .content form .user-details{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-details::-webkit-scrollbar{
+      width: 5px;
+    }
+    }
+    @media(max-width: 459px){
+    .container1 .content{
+      flex-direction: column;
+    }
+    .container2{
+      margin: 30px 0px 0px 9%;
+    }
+  }
+  
+  @media (max-width: 400px){
+    .image .details p{
+      font-size: 16px;
+    }
+
+    .container2{
+      margin: 30px 0px 0px 5%;
+    }
+  
+    .more .read-more, .more .icon-links a i{
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 375px){
+    .image{
+      flex: 100%;
+      width: auto;
+      height: auto;
+    }
+
+    .container2{
+      margin: 30px 0px 0px 3%;
+    }
+  }
