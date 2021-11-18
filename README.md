@@ -14,7 +14,7 @@ _3. Ebook url._
 
 ---
 
-#### Basic Usage?
+#### Basic Usage
 
 ![](public/img/web_scraping.gif)
 
